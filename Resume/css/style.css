@@ -64,6 +64,22 @@ a i:hover {
     box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
 }
 
+section {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-child(2n + 1) {
+    background-color: white;
+} 
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
 /*About section*/
 
 #about {
@@ -101,3 +117,58 @@ a i:hover {
     color: #2857a4;
     font-weight: 600;
 }
+
+.section-heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    margin: 10px auto;
+    font-weight: 400;
+}
+
+.section-heading span {
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.mb75px {
+    margin-bottom: 75px;
+}
+
+.mb-blue {
+    background-color: #2857a4;
+}
+/*Skills Section*/
+
+
+
+.skills-display {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-progress {
+    width: 7rem;
+    height: 1.4rem;
+    background-color: lightgrey;
+    border-radius: 0.8rem;
+}
+
+.skill-progress>div {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.skill-name span {
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.eighty-five-percent {
+    width: 85%;
+    height: inherit;
+}
+
