@@ -1,0 +1,7 @@
+#container {
+    width: 400px;
+    height: 400px;
+    margin: 40px;
+    border: 2px solid black;
+    background: radial-gradient(red, blue);
+}
