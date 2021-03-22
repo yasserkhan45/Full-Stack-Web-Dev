@@ -225,6 +225,24 @@ section:nth-child(2n) {
     left: 50%;
 }
 
+@media screen and (max-width: 600px){
+    .timeline-divider{
+        left: 5%;
+    }
+
+    .timeline-box{
+        left: 12% !important;
+        width: 80%;
+    }
+
+    .timeline-box:nth-child(2n + 1)::after {
+        left:-12%;
+    }
+    .timeline-box:nth-child(2n)::after {
+        left:-12%;
+    }
+}
+
 .timeline-traveller {
     position: sticky;
     top: 25%;
