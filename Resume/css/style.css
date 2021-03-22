@@ -65,11 +65,11 @@ a i:hover {
 }
 
 section {
-    height: 75vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 section:nth-child(2n + 1) {
@@ -171,6 +171,119 @@ section:nth-child(2n) {
     width: 85%;
     height: inherit;
 }
+
+/*Timeline*/
+.timeline {
+    position: relative;
+    width: 75%;
+    border: 2px solid black;
+}
+
+.timeline-box {
+    position: relative;
+    margin: 5px;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    border: 2px solid black;
+}
+
+.timeline-box:nth-child(2n) {
+    left:53%;
+}
+
+.timeline-box:nth-child(2n + 1)::after {
+    content: "";
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    position: absolute;
+    top: 35%;
+    right: -12%;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after {
+    content: "";
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    position: absolute;
+    top: 35%;
+    left: -10%;
+    z-index: 1;
+}
+
+.timeline-divider {
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 2px dashed #0096fa6b;
+    top: 10%;
+    left: 50%;
+}
+
+.timeline-traveller {
+    position: sticky;
+    top: 25%;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+/* Portfolio Section */
+
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 2%;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details {
+    /* display: none; */
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+    /* background-color: white; */
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    /* display: block; */
+    color: white;
+}
+
+
+/*Contacts*/
 
 #contact {
     background-color: #0abcf9;
@@ -284,7 +397,6 @@ button:focus {
 }
 
 
-
 /* Common Margin Classes */
 
 .mb75px {
@@ -343,3 +455,4 @@ button:focus {
     height: inherit;
     width: 50%;
 }
+ 
